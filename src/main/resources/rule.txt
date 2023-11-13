@@ -1,0 +1,3 @@
+cannotEmptyBreakBlock 取消史蒂夫的金刚手，让史蒂夫空手破坏方块掉血 (6点
+NoVanillaCraft 移除了所有原版配方
+cannotNoToolsBreakBlock 当你没有工具时，破坏方块会掉血 (6点
