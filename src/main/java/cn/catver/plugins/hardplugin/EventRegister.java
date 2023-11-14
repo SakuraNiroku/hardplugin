@@ -1,6 +1,5 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.rule.cannotEmptyBreakBlock.cannotEmptyBreakBlock;
 import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -15,7 +14,6 @@ public class EventRegister {
         Logger logger = hardplugin.getLogger();
 
         //TODO 写在这里
-        events.put("cannotEmptyBreakBlock",new cannotEmptyBreakBlock());
         events.put("cannotNoToolsBreakBlock",new cannotNoToolsBreakBlock());
 
         logger.info("正在导入事件！");

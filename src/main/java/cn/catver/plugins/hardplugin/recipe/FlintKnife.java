@@ -20,22 +20,9 @@ public class FlintKnife{
     }
 
     public FlintKnife(){
-        ItemStack itemStack = new ItemStack(Material.FLINT);
-        {
-            ItemMeta itemMeta = itemStack.getItemMeta();
-            itemMeta.setDisplayName("燧石刀");
-            List<String> lore = new ArrayList<>();
-            lore.add("耐久：25");
-            itemMeta.setLore(lore);
-            itemStack.setItemMeta(itemMeta);
 
-            NBT.modify(itemStack,nbt->{
-                nbt.setString("isItTool","yes");
-                nbt.setInteger("durable_hardplugin",25);
-            });
-        }
 
-        recipe = new ShapelessRecipe(new NamespacedKey(Hardplugin.getIns(),ID),itemStack);
+        recipe = new ShapelessRecipe(new NamespacedKey(Hardplugin.getIns(),ID), cn.catver.plugins.hardplugin.item.FlintKnife.getItem());
 
         recipe.addIngredient(Material.FLINT);
         recipe.addIngredient(Material.DIRT);
