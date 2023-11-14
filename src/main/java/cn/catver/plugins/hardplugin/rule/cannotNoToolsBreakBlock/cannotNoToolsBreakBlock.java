@@ -2,6 +2,7 @@ package cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock;
 
 import de.tr7zw.changeme.nbtapi.NBT;
 import de.tr7zw.changeme.nbtapi.iface.ReadableItemNBT;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -41,6 +42,9 @@ public class cannotNoToolsBreakBlock implements Listener {
                             nbt.setInteger("durable_hardplugin", finalDurable);
                         });
                         e.getPlayer().getInventory().addItem(itemStack);
+                        e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
+                    }else{
+                        e.getPlayer().sendMessage(ChatColor.RED+"你的工具炸了！");
                     }
                 }
             }else {

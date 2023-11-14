@@ -1,7 +1,8 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.recipe.FlintKnife;
-import cn.catver.plugins.hardplugin.recipe.GravelToFlint;
+import cn.catver.plugins.hardplugin.recipe.FlintKnifeRecipe;
+import cn.catver.plugins.hardplugin.recipe.FlintPickaxeRecipe;
+import cn.catver.plugins.hardplugin.recipe.GravelToFlintRecipe;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.Recipe;
@@ -17,8 +18,9 @@ public class RecipeRegister {
         Logger logger = hardplugin.getLogger();
 
         //TODO 写在这里
-        recipes.put(FlintKnife.ID,FlintKnife.gen().recipe);
-        recipes.put(GravelToFlint.ID,GravelToFlint.gen().recipe);
+        recipes.put(FlintKnifeRecipe.ID, FlintKnifeRecipe.gen().recipe);
+        recipes.put(GravelToFlintRecipe.ID, GravelToFlintRecipe.gen().recipe);
+        recipes.put(FlintPickaxeRecipe.ID,FlintPickaxeRecipe.gen().recipe);
 
 
         logger.info("开始导入配方");

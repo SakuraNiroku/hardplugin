@@ -1,6 +1,7 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
+import cn.catver.plugins.hardplugin.rule.eatRawMeatMaybeDie.eatRawMeatMaybeDie;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 
@@ -15,6 +16,7 @@ public class EventRegister {
 
         //TODO 写在这里
         events.put("cannotNoToolsBreakBlock",new cannotNoToolsBreakBlock());
+        events.put("eatRawMeatMaybeDie",new eatRawMeatMaybeDie());
 
         logger.info("正在导入事件！");
         for (Map.Entry<String, Listener> entry : events.entrySet()) {

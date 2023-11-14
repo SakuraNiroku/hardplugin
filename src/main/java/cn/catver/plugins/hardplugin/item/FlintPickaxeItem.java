@@ -8,25 +8,26 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlintKnife {
+public class FlintPickaxeItem {
     private static ItemStack itemStack;
     static {
-        itemStack = new ItemStack(Material.WOODEN_SHOVEL);
+        itemStack = new ItemStack(Material.WOODEN_PICKAXE);
         {
             ItemMeta itemMeta = itemStack.getItemMeta();
-            itemMeta.setDisplayName("燧石刀");
+            itemMeta.setDisplayName("燧石镐");
             List<String> lore = new ArrayList<>();
-            lore.add("耐久：25");
+            lore.add("耐久：50");
             itemMeta.setLore(lore);
             itemMeta.setUnbreakable(true);
             itemStack.setItemMeta(itemMeta);
 
             NBT.modify(itemStack, nbt->{
                 nbt.setString("isItTool","yes");
-                nbt.setInteger("durable_hardplugin",25);
+                nbt.setInteger("durable_hardplugin",50);
             });
         }
     }
+
     public static ItemStack getItem(){
         return itemStack.clone();
     }
