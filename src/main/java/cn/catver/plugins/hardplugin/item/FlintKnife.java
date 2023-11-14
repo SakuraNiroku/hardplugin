@@ -11,12 +11,14 @@ import java.util.List;
 public class FlintKnife {
     private static ItemStack itemStack;
     static {
+        itemStack = new ItemStack(Material.WOODEN_SHOVEL);
         {
             ItemMeta itemMeta = itemStack.getItemMeta();
             itemMeta.setDisplayName("燧石刀");
             List<String> lore = new ArrayList<>();
             lore.add("耐久：25");
             itemMeta.setLore(lore);
+            itemMeta.setUnbreakable(true);
             itemStack.setItemMeta(itemMeta);
 
             NBT.modify(itemStack, nbt->{

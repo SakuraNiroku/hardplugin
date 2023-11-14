@@ -1,6 +1,7 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.recipe.FlintKnife;
+import cn.catver.plugins.hardplugin.recipe.GravelToFlint;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.Recipe;
@@ -17,6 +18,7 @@ public class RecipeRegister {
 
         //TODO 写在这里
         recipes.put(FlintKnife.ID,FlintKnife.gen().recipe);
+        recipes.put(GravelToFlint.ID,GravelToFlint.gen().recipe);
 
 
         logger.info("开始导入配方");

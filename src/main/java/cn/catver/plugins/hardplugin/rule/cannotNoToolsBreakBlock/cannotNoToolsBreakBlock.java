@@ -24,7 +24,6 @@ public class cannotNoToolsBreakBlock implements Listener {
                     e.getPlayer().damage(6);
                 }else{
                     ItemStack itemStack = e.getPlayer().getInventory().getItemInMainHand();
-                    itemStack.setAmount(1);
                     int durable = NBT.get(itemStack, (Function<ReadableItemNBT, Integer>) nbt->nbt.getInteger("durable_hardplugin"));
                     durable = durable - 1;
                     e.getPlayer().getInventory().remove(itemStack);
@@ -33,6 +32,7 @@ public class cannotNoToolsBreakBlock implements Listener {
                         List<String> lore = new ArrayList<>();
                         lore.add(String.format("耐久：%d", durable));
                         itemMeta.setLore(lore);
+                        itemMeta.setUnbreakable(true);
                         itemStack.setItemMeta(itemMeta);
 
                         int finalDurable = durable;
@@ -46,6 +46,8 @@ public class cannotNoToolsBreakBlock implements Listener {
             }else {
                 e.getPlayer().damage(6);
             }
+        }else{
+            e.getPlayer().damage(6);
         }
     }
 }
