@@ -1,5 +1,6 @@
 package cn.catver.plugins.hardplugin;
 
+import cn.catver.plugins.hardplugin.event.CoalCraftTableEvent;
 import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
 import cn.catver.plugins.hardplugin.rule.eatRawMeatMaybeDie.eatRawMeatMaybeDie;
 import org.bukkit.Bukkit;
@@ -17,6 +18,7 @@ public class EventRegister {
         //TODO 写在这里
         events.put("cannotNoToolsBreakBlock",new cannotNoToolsBreakBlock());
         events.put("eatRawMeatMaybeDie",new eatRawMeatMaybeDie());
+        events.put("coalCraftTableCoreEvent",new CoalCraftTableEvent());
 
         logger.info("正在导入事件！");
         for (Map.Entry<String, Listener> entry : events.entrySet()) {
