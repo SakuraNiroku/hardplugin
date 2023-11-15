@@ -24,10 +24,11 @@ public class cannotNoToolsBreakBlock implements Listener {
                 if(!isItTool.equalsIgnoreCase("yes")){
                     e.getPlayer().damage(6);
                 }else{
-                    ItemStack itemStack = e.getPlayer().getInventory().getItemInMainHand();
+                    int slot = e.getPlayer().getInventory().getHeldItemSlot();
+                    ItemStack itemStack = e.getPlayer().getInventory().getItem(slot);
                     int durable = NBT.get(itemStack, (Function<ReadableItemNBT, Integer>) nbt->nbt.getInteger("durable_hardplugin"));
                     durable = durable - 1;
-                    e.getPlayer().getInventory().remove(itemStack);
+
                     if(durable != 0){
                         ItemMeta itemMeta = itemStack.getItemMeta();
                         List<String> lore = new ArrayList<>();
@@ -41,9 +42,11 @@ public class cannotNoToolsBreakBlock implements Listener {
                             nbt.setString("isItTool","yes");
                             nbt.setInteger("durable_hardplugin", finalDurable);
                         });
-                        e.getPlayer().getInventory().addItem(itemStack);
+                        //e.getPlayer().getInventory().addItem(itemStack);
+                        e.getPlayer().getInventory().setItem(slot,itemStack);
                         e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
                     }else{
+                        e.getPlayer().getInventory().setItem(slot,new ItemStack(Material.AIR));
                         e.getPlayer().sendMessage(ChatColor.RED+"你的工具炸了！");
                     }
                 }
