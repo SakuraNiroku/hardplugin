@@ -15,7 +15,7 @@ public class GravelToFlintRecipe {
     public static GravelToFlintRecipe gen(){
         GravelToFlintRecipe gravelToFlintRecipe = new GravelToFlintRecipe();
         gravelToFlintRecipe.recipe = new ShapelessRecipe(new NamespacedKey(Hardplugin.getIns(),ID),new ItemStack(Material.FLINT));
-        gravelToFlintRecipe.recipe.addIngredient(Material.GRAVEL);
+        gravelToFlintRecipe.recipe.addIngredient(new RecipeChoice.ExactChoice(new ItemStack(Material.GRAVEL)));
         //gravelToFlintRecipe.recipe.addIngredient(new RecipeChoice.ExactChoice(FlintKnifeItem.getItem()));
         return gravelToFlintRecipe;
     }

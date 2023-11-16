@@ -1,6 +1,10 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.recipe.*;
+import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookBeefCampfireRecipe;
+import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookChickenCampfireRecipe;
+import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookMuttonCampfireRecipe;
+import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookPorkchopCampfireRecipe;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.Recipe;
@@ -21,6 +25,14 @@ public class RecipeRegister {
         recipes.put(FlintPickaxeRecipe.ID,FlintPickaxeRecipe.gen().recipe);
         recipes.put(StickRecipe.ID,StickRecipe.gen());
         recipes.put(CoalBlockRecipe.ID,CoalBlockRecipe.gen());
+        recipes.put(CampfireRecipe.ID,CampfireRecipe.gen());
+
+        recipes.put(CookBeefCampfireRecipe.ID,CookBeefCampfireRecipe.gen());
+        recipes.put(CookChickenCampfireRecipe.ID,CookChickenCampfireRecipe.gen());
+        recipes.put(CookMuttonCampfireRecipe.ID,CookMuttonCampfireRecipe.gen());
+        recipes.put(CookPorkchopCampfireRecipe.ID,CookPorkchopCampfireRecipe.gen());
+
+        recipes.put(CraftTableRecipe.ID,CraftTableRecipe.gen());
 
 
         logger.info("开始导入配方");
