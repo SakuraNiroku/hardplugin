@@ -1,7 +1,10 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.event.CoalCraftTableEvent;
+import cn.catver.plugins.hardplugin.rule.clickCoalCraftTableToGiveACore.clickCoalCraftTableToGiveACore;
 import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
+import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerHeldItemEvent;
+import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerJoinEvent;
+import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerLeftEvent;
 import cn.catver.plugins.hardplugin.rule.eatRawMeatMaybeDie.eatRawMeatMaybeDie;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -17,8 +20,14 @@ public class EventRegister {
 
         //TODO 写在这里
         events.put("cannotNoToolsBreakBlock",new cannotNoToolsBreakBlock());
+
         events.put("eatRawMeatMaybeDie",new eatRawMeatMaybeDie());
-        events.put("coalCraftTableCoreEvent",new CoalCraftTableEvent());
+
+        events.put("clickCoalCraftTableToGiveACore",new clickCoalCraftTableToGiveACore());
+
+        events.put("displayToolDurableFromBossBar1",new DurableDisplayPlayerHeldItemEvent());
+        events.put("displayToolDurableFromBossBar2",new DurableDisplayPlayerJoinEvent());
+        events.put("displayToolDurableFromBossBar3",new DurableDisplayPlayerLeftEvent());
 
         logger.info("正在导入事件！");
         for (Map.Entry<String, Listener> entry : events.entrySet()) {

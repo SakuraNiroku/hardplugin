@@ -1,7 +1,6 @@
-package cn.catver.plugins.hardplugin.event;
+package cn.catver.plugins.hardplugin.rule.clickCoalCraftTableToGiveACore;
 
 import cn.catver.plugins.hardplugin.item.CoalCraftTableCore;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -10,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class CoalCraftTableEvent implements Listener {
+public class clickCoalCraftTableToGiveACore implements Listener {
     @EventHandler
     public void playerhitblockfunc(PlayerInteractEvent event){
         if(event.hasBlock()){

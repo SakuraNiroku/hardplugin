@@ -2,4 +2,6 @@
 . NoVanillaCraft 移除了所有原版配方
 . cannotNoToolsBreakBlock 当你没有工具时，破坏方块会掉血 (6点，(工具会掉耐久qwq
 . eatRawMeatMaybeDie 食用生肉有概率直接死亡
+. clickCoalCraftTableToGiveACore 点击煤炭工作台给予一个核心
+displayToolDurableFromBossBar 在Boss栏中显示显示工具耐久（少于50时开始变化
 
