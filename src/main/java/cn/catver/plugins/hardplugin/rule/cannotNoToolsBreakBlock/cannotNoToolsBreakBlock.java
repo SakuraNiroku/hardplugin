@@ -44,7 +44,7 @@ public class cannotNoToolsBreakBlock implements Listener {
                         });
                         //e.getPlayer().getInventory().addItem(itemStack);
                         e.getPlayer().getInventory().setItem(slot,itemStack);
-                        e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
+                        //e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
                     }else{
                         e.getPlayer().getInventory().setItem(slot,new ItemStack(Material.AIR));
                         e.getPlayer().sendMessage(ChatColor.RED+"你的工具炸了！");
