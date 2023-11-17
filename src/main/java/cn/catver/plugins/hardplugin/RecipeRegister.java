@@ -33,6 +33,8 @@ public class RecipeRegister {
         recipes.put(CookPorkchopCampfireRecipe.ID,CookPorkchopCampfireRecipe.gen());
 
         recipes.put(CraftTableRecipe.ID,CraftTableRecipe.gen());
+        recipes.put(StonePickaxeRecipe.ID,StonePickaxeRecipe.gen());
+        recipes.put(FlintSwordRecipe.ID,FlintSwordRecipe.gen());
 
 
         logger.info("开始导入配方");

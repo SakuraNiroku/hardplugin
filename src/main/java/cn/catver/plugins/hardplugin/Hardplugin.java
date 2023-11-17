@@ -1,15 +1,6 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.rule.NoVanillaCraft.NoVanillaCraft;
-import de.tr7zw.changeme.nbtapi.NBT;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.ShapedRecipe;
-import org.bukkit.inventory.ShapelessRecipe;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -51,6 +42,7 @@ public final class Hardplugin extends JavaPlugin {
 
         logger.info("尝试导入事件");
         EventRegister eventRegister = new EventRegister(this);
+
     }
 
     @Override

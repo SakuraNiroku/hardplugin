@@ -6,9 +6,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 
 public class CookMuttonCampfireRecipe {
-    public static final String ID = "mutton";
+    public static final String ID = "cookmuttoncampfirerecipe";
     public static CampfireRecipe gen(){
-        return CookRawMeatCampfireRecipe.gen(String.format("cook%scampfirerecipe", ID),
+        return CookRawMeatCampfireRecipe.gen(ID,
                 new ItemStack(Material.COOKED_MUTTON),new RecipeChoice.ExactChoice(new ItemStack(Material.MUTTON)),
                 100);
     }

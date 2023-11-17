@@ -25,9 +25,9 @@ public class EventRegister {
 
         events.put("clickCoalCraftTableToGiveACore",new clickCoalCraftTableToGiveACore());
 
-        events.put("displayToolDurableFromBossBar1",new DurableDisplayPlayerHeldItemEvent());
-        events.put("displayToolDurableFromBossBar2",new DurableDisplayPlayerJoinEvent());
-        events.put("displayToolDurableFromBossBar3",new DurableDisplayPlayerLeftEvent());
+        events.put("displayToolDurableFromBossBar1",new DurableDisplayPlayerJoinEvent());
+        events.put("displayToolDurableFromBossBar2",new DurableDisplayPlayerLeftEvent());
+        events.put("displayToolDurableFromBossBar3",new DurableDisplayPlayerHeldItemEvent());
 
         logger.info("正在导入事件！");
         for (Map.Entry<String, Listener> entry : events.entrySet()) {

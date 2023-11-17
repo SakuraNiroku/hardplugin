@@ -7,6 +7,6 @@ import org.bukkit.event.player.PlayerQuitEvent;
 public class DurableDisplayPlayerLeftEvent implements Listener {
     @EventHandler
     public void playerleftfunc(PlayerQuitEvent event){
-        DurableBossBarManager.removeABossBarForPlayer(event.getPlayer());
+        DurableDisplayManager.removeABossBarForPlayer(event.getPlayer());
     }
 }

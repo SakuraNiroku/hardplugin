@@ -1,5 +1,6 @@
 package cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock;
 
+import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayManager;
 import de.tr7zw.changeme.nbtapi.NBT;
 import de.tr7zw.changeme.nbtapi.iface.ReadableItemNBT;
 import org.bukkit.ChatColor;
@@ -34,7 +35,6 @@ public class cannotNoToolsBreakBlock implements Listener {
                         List<String> lore = new ArrayList<>();
                         lore.add(String.format("耐久：%d", durable));
                         itemMeta.setLore(lore);
-                        itemMeta.setUnbreakable(true);
                         itemStack.setItemMeta(itemMeta);
 
                         int finalDurable = durable;
@@ -45,9 +45,11 @@ public class cannotNoToolsBreakBlock implements Listener {
                         //e.getPlayer().getInventory().addItem(itemStack);
                         e.getPlayer().getInventory().setItem(slot,itemStack);
                         //e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
+                        DurableDisplayManager.updateBossBar(e.getPlayer(),itemStack);
                     }else{
                         e.getPlayer().getInventory().setItem(slot,new ItemStack(Material.AIR));
                         e.getPlayer().sendMessage(ChatColor.RED+"你的工具炸了！");
+                        DurableDisplayManager.updateBossBar(e.getPlayer(), null);
                     }
                 }
             }else {

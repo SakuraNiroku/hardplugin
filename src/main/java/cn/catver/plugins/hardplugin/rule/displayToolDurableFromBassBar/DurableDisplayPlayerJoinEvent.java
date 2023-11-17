@@ -6,6 +6,6 @@ import org.bukkit.event.Listener;
 public class DurableDisplayPlayerJoinEvent implements Listener {
     @EventHandler
     public void playerjoinfunc(org.bukkit.event.player.PlayerJoinEvent event){
-        DurableBossBarManager.createABossBarForPlayer(event.getPlayer());
+        DurableDisplayManager.createABossBarForPlayer(event.getPlayer());
     }
 }
