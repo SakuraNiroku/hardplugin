@@ -1,6 +1,6 @@
 package cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore;
 
-import cn.catver.plugins.hardplugin.item.CoalCraftTableCore;
+import cn.catver.plugins.hardplugin.ItemRegister;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -30,7 +30,7 @@ public class clickCoalCraftTableToGiveACore implements Listener {
                             }
                         }
                     }
-                    event.getPlayer().getInventory().addItem(CoalCraftTableCore.getItem());
+                    event.getPlayer().getInventory().addItem(ItemRegister.getItem("coalcrafttablecore"));
                     event.getPlayer().sendMessage(ChatColor.GREEN+"你获得了一个煤炭工作台核心！");
                 }
             }

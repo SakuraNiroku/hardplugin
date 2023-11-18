@@ -1,0 +1,80 @@
+[
+  {
+    "id": "coalcrafttablecore",
+    "display": "&a煤炭工作台核心",
+    "type": "BRICK",
+    "tool": false
+  },
+  {
+    "id": "copperaxeitem",
+    "display": "铜斧头",
+    "type": "STONE_AXE",
+    "tool": true,
+    "durable": 275,
+    "ench": {
+      "DAMAGE_ALL": 2,
+      "DIG_SPEED": 2
+    }
+  },
+  {
+    "id": "flintknifeitem",
+    "display": "燧石刀",
+    "type": "WOODEN_SHOVEL",
+    "tool": true,
+    "durable": 25
+  },
+  {
+    "id": "flintpickaxeitem",
+    "display": "燧石镐",
+    "type": "WOODEN_PICKAXE",
+    "tool": true,
+    "durable": 50
+  },
+  {
+    "id": "flintsworditem",
+    "display": "燧石剑",
+    "type": "WOODEN_SWORD",
+    "tool": false,
+    "ench": {
+      "DAMAGE_ALL": 1
+    }
+  },
+  {
+    "id": "rawcoppercrafttablecore",
+    "display": "&e粗铜工作台核心",
+    "type": "BRICK",
+    "tool": false
+  },
+  {
+    "id": "rawcopperpickaxeitem",
+    "display": "粗铜镐",
+    "type": "IRON_PICKAXE",
+    "tool": true,
+    "durable": 20
+  },
+  {
+    "id": "softironingotitem",
+    "display": "&6软铁锭",
+    "type": "IRON_INGOT",
+    "tool": false
+  },
+  {
+    "id": "softsteelingotitem",
+    "display": "&9软钢锭",
+    "type": "IRON_INGOT",
+    "tool": false
+  },
+  {
+    "id": "steelingotitem",
+    "display": "&6钢锭",
+    "type": "IRON_INGOT",
+    "tool": false
+  },
+  {
+    "id": "stonepickaxeitem",
+    "display": "石镐",
+    "type": "STONE_PICKAXE",
+    "tool": true,
+    "durable": 100
+  }
+]

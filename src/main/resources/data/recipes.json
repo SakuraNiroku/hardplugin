@@ -1,0 +1,440 @@
+[
+  {
+    "type": "campfire",
+    "id": "cookbeefcampfirerecipe",
+    "input": {
+      "material": "BEEF"
+    },
+    "output": {
+      "material": "COOKED_BEEF",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 1000
+  },
+  {
+    "type": "campfire",
+    "id": "cookchickencampfirerecipe",
+    "input": {
+      "material": "CHICKEN"
+    },
+    "output": {
+      "material": "COOKED_CHICKEN",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 1000
+  },
+  {
+    "type": "campfire",
+    "id": "cookmuttoncampfirerecipe",
+    "input": {
+      "material": "MUTTON"
+    },
+    "output": {
+      "material": "COOKED_MUTTON",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 1000
+  },
+  {
+    "type": "campfire",
+    "id": "cookporkchopcampfirerecipe",
+    "input": {
+      "material": "PORKCHOP"
+    },
+    "output": {
+      "material": "COOKED_PORKCHOP",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 1000
+  },
+  {
+    "type": "campfire",
+    "id": "softironingotrecipe",
+    "input": {
+      "material": "RAW_IRON"
+    },
+    "output": {
+      "id": "softironingotitem",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 5000
+  },
+  {
+    "type": "furnace",
+    "id": "copperingotrecipe",
+    "input": {
+      "material": "RAW_COPPER"
+    },
+    "output": {
+      "material": "COPPER_INGOT",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 2000
+  },
+  {
+    "type": "furnace",
+    "id": "steelingotrecipe",
+    "input": {
+      "id": "softsteelingotitem"
+    },
+    "output": {
+      "id": "steelingotitem",
+      "count": 1
+    },
+    "xp": 0,
+    "cooktime": 10000
+  },
+  {
+    "type": "shaped",
+    "id": "bedrecipe",
+    "shaped": [
+      "   ","ggg","kjj"
+    ],
+    "input": {
+      "g": {
+        "material": "WHITE_WOOL"
+      },
+      "k": {
+        "id": "coalcrafttablecore"
+      },
+      "j": {
+        "material": "OAK_LOG"
+      }
+    },
+    "output": {
+      "material": "WHITE_BED",
+      "count": 1
+    }
+  },
+  {
+    "id": "campfirerecipe",
+    "type": "shapeless",
+    "input": [
+      {
+        "material": "FLINT"
+      },
+      {
+        "material": "STICK"
+      },
+      {
+        "material": "STICK"
+      },
+      {
+        "material": "STICK"
+      }
+    ],
+    "output": {
+      "material": "CAMPFIRE",
+      "count": 1
+    }
+  },
+  {
+    "id": "chestrecipe",
+    "type": "shaped",
+    "shaped": [
+      "ggg","gag","ggg"
+    ],
+    "input": {
+      "g": {
+        "material": "OAK_LOG"
+      },
+      "a": {
+        "material": "FLINT"
+      }
+    },
+    "output": {
+      "material": "CHEST",
+      "count": 1
+    }
+  },
+  {
+    "id": "coalblockrecipe",
+    "type": "shaped",
+    "shaped": [
+      "ggg","ggg","ggg"
+    ],
+    "input": {
+      "g": {
+        "material": "COAL"
+      }
+    },
+    "output": {
+      "material": "COAL_BLOCK",
+      "count": 1
+    }
+  },
+  {
+    "id": "copperaxerecipe",
+    "type": "shaped",
+    "shaped": [
+      "kka","kla","pl "
+    ],
+    "input": {
+      "p": {
+        "id": "rawcoppercrafttablecore"
+      },
+      "k": {
+        "material": "COPPER_INGOT"
+      },
+      "a": {
+        "material": "RAW_COPPER_BLOCK"
+      },
+      "l": {
+        "material": "STICK"
+      }
+    },
+    "output": {
+      "id": "copperaxeitem",
+      "count": 1
+    }
+  },
+  {
+    "id": "crafttablerecipe",
+    "type": "shapeless",
+    "input": [
+      {
+        "material": "FLINT"
+      },
+      {
+        "material": "OAK_LOG"
+      },
+      {
+        "material": "OAK_LOG"
+      },
+      {
+        "material": "OAK_LOG"
+      }
+    ],
+    "output": {
+      "material": "CRAFTING_TABLE",
+      "count": 1
+    }
+  },
+  {
+    "id": "flintknife",
+    "type": "shapeless",
+    "input": [
+      {
+        "material": "FLINT"
+      },
+      {
+        "material": "DIRT"
+      }
+    ],
+    "output": {
+      "id": "flintknifeitem",
+      "count": 1
+    }
+  },
+  {
+    "id": "flintpickaxe",
+    "type": "shaped",
+    "shaped": [
+      "jjj"," a "," a "
+    ],
+    "input": {
+      "j": {
+        "material": "FLINT"
+      },
+      "a": {
+        "material": "STICK"
+      }
+    },
+    "output": {
+      "id": "flintpickaxeitem",
+      "count": 1
+    }
+  },
+  {
+    "id": "flintswordrecipe",
+    "type": "shaped",
+    "shaped": [
+      " k ","ak "," j "
+    ],
+    "input": {
+      "k": {
+        "material": "FLINT"
+      },
+      "a": {
+        "id": "coalcrafttablecore"
+      },
+      "j": {
+        "material": "STICK"
+      }
+    },
+    "output": {
+      "id": "flintsworditem",
+      "count": 1
+    }
+  },
+  {
+    "type": "shaped",
+    "id": "furnacerecipe",
+    "shaped": [
+      "ooo","olk","ooo"
+    ],
+    "input": {
+      "o": {
+        "material": "COBBLESTONE"
+      },
+      "l": {
+        "id": "rawcoppercrafttablecore"
+      },
+      "k": {
+        "material": "RAW_COPPER_BLOCK"
+      }
+    },
+    "output": {
+      "material": "FURNACE",
+      "count": 1
+    }
+  },
+  {
+    "id": "graveltoflint",
+    "type": "shapeless",
+    "input": [
+      {
+        "material": "GRAVEL"
+      }
+    ],
+    "output": {
+      "material": "FLINT",
+      "count": 1
+    }
+  },
+  {
+    "type": "shaped",
+    "id": "rawcopperblockrecipe",
+    "shaped": [
+      "ggg","gkg","ggg"
+    ],
+    "input": {
+      "g": {
+        "material": "RAW_COPPER"
+      },
+      "k": {
+        "id": "coalcrafttablecore"
+      }
+    },
+    "output": {
+      "material": "RAW_COPPER_BLOCK",
+      "count": 1
+    }
+  },
+  {
+    "id": "rawcopperpickaxerecipe",
+    "type": "shaped",
+    "shaped": [
+      "kkk","klk","alp"
+    ],
+    "input": {
+      "k": {
+        "material": "RAW_COPPER"
+      },
+      "l": {
+        "material": "STICK"
+      },
+      "a": {
+        "id": "rawcoppercrafttablecore"
+      },
+      "p": {
+        "material": "LAPIS_LAZULI"
+      }
+    },
+    "output": {
+      "id": "rawcopperpickaxeitem",
+      "count": 1
+    }
+  },
+  {
+    "id": "softsteelingotrecipe",
+    "type": "shaped",
+    "shaped": [
+      "   ","qwe","a  "
+    ],
+    "input": {
+      "q": {
+        "id": "softironingotitem"
+      },
+      "w": {
+        "material": "DIAMOND"
+      },
+      "e": {
+        "material": "RAW_COPPER_BLOCK"
+      },
+      "a": {
+        "id": "coalcrafttablecore"
+      }
+    },
+    "output": {
+      "id": "softsteelingotitem",
+      "count": 1
+    }
+  },
+  {
+    "type": "shapeless",
+    "id": "stickrecipe",
+    "input": [
+      {
+        "material": "OAK_LOG"
+      },
+      {
+        "material": "FLINT"
+      }
+    ],
+    "output": {
+      "material": "STICK",
+      "count": 6
+    }
+  },
+  {
+    "type": "shaped",
+    "id": "stonepickaxerecipe",
+    "shaped": [
+      "jjj","klo"," l "
+    ],
+    "input": {
+      "j": {
+        "material": "FLINT"
+      },
+      "k": {
+        "material": "COAL_BLOCK"
+      },
+      "o": {
+        "id": "coalcrafttablecore"
+      },
+      "l": {
+        "material": "STICK"
+      }
+    },
+    "output": {
+      "id": "stonepickaxeitem",
+      "count": 1
+    }
+  },
+  {
+    "type": "shaped",
+    "id": "torchrecipe",
+    "shaped": [
+      "aaa","kkk","aaa"
+    ],
+    "input": {
+      "a": {
+        "material": "STICK"
+      },
+      "k": {
+        "material": "FLINT"
+      }
+    },
+    "output": {
+      "material": "TORCH",
+      "count": 16
+    }
+  }
+]

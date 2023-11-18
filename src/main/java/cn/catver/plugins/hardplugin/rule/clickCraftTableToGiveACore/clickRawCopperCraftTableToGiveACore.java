@@ -1,6 +1,6 @@
 package cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore;
 
-import cn.catver.plugins.hardplugin.item.RawCopperCraftTableCore;
+import cn.catver.plugins.hardplugin.ItemRegister;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -30,7 +30,7 @@ public class clickRawCopperCraftTableToGiveACore implements Listener {
                             }
                         }
                     }
-                    event.getPlayer().getInventory().addItem(RawCopperCraftTableCore.getItem());
+                    event.getPlayer().getInventory().addItem(ItemRegister.getItem("rawcoppercrafttablecore"));
                     event.getPlayer().sendMessage(ChatColor.GREEN+"你获得了一个粗铜工作台核心！");
                 }
             }
