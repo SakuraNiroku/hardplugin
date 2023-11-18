@@ -1,11 +1,9 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.recipe.*;
-import cn.catver.plugins.hardplugin.recipe.cook.CopperIngotRecipe;
-import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookBeefCampfireRecipe;
-import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookChickenCampfireRecipe;
-import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookMuttonCampfireRecipe;
-import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookPorkchopCampfireRecipe;
+import cn.catver.plugins.hardplugin.recipe.cook.campfire.*;
+import cn.catver.plugins.hardplugin.recipe.cook.furnace.CopperIngotRecipe;
+import cn.catver.plugins.hardplugin.recipe.cook.furnace.SteelIngotRecipe;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.Recipe;
@@ -44,6 +42,9 @@ public class RecipeRegister {
         recipes.put(CopperIngotRecipe.ID,CopperIngotRecipe.recipe);
         recipes.put(CopperAxeRecipe.ID,CopperAxeRecipe.recipe);
         recipes.put(ChestRecipe.ID,ChestRecipe.gen());
+        recipes.put(SoftSteelIngotRecipe.ID,SoftSteelIngotRecipe.recipe());
+        recipes.put(SteelIngotRecipe.ID,SteelIngotRecipe.recipe());
+        recipes.put(SoftIronIngotRecipe.ID,SoftIronIngotRecipe.recipe());
 
 
         logger.info("开始导入配方");

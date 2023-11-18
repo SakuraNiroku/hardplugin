@@ -1,4 +1,4 @@
-package cn.catver.plugins.hardplugin.recipe.cook;
+package cn.catver.plugins.hardplugin.recipe.cook.furnace;
 
 import cn.catver.plugins.hardplugin.Hardplugin;
 import org.bukkit.Material;
