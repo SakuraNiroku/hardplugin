@@ -1,6 +1,7 @@
 package cn.catver.plugins.hardplugin;
 
 import cn.catver.plugins.hardplugin.recipe.*;
+import cn.catver.plugins.hardplugin.recipe.cook.CopperIngotRecipe;
 import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookBeefCampfireRecipe;
 import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookChickenCampfireRecipe;
 import cn.catver.plugins.hardplugin.recipe.cook.campfire.CookMuttonCampfireRecipe;
@@ -35,6 +36,13 @@ public class RecipeRegister {
         recipes.put(CraftTableRecipe.ID,CraftTableRecipe.gen());
         recipes.put(StonePickaxeRecipe.ID,StonePickaxeRecipe.gen());
         recipes.put(FlintSwordRecipe.ID,FlintSwordRecipe.gen());
+        recipes.put(BedRecipe.ID,BedRecipe.gen());
+        recipes.put(TorchRecipe.ID,TorchRecipe.gen());
+        recipes.put(RawCopperPickaxeRecipe.ID,RawCopperPickaxeRecipe.recipe);
+        recipes.put(RawCopperBlockRecipe.ID,RawCopperBlockRecipe.recipe);
+        recipes.put(FurnaceRecipe.ID,FurnaceRecipe.recipe);
+        recipes.put(CopperIngotRecipe.ID,CopperIngotRecipe.recipe);
+        recipes.put(CopperAxeRecipe.ID,CopperAxeRecipe.recipe);
 
 
         logger.info("开始导入配方");

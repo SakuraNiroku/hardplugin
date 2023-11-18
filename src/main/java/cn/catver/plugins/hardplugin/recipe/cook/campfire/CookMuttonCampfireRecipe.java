@@ -10,6 +10,6 @@ public class CookMuttonCampfireRecipe {
     public static CampfireRecipe gen(){
         return CookRawMeatCampfireRecipe.gen(ID,
                 new ItemStack(Material.COOKED_MUTTON),new RecipeChoice.ExactChoice(new ItemStack(Material.MUTTON)),
-                100);
+                1000);
     }
 }

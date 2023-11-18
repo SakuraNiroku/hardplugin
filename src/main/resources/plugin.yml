@@ -1,4 +1,4 @@
 name: hardplugin
 version: '${project.version}'
 main: cn.catver.plugins.hardplugin.Hardplugin
-api-version: '1.16'
+api-version: '1.20'

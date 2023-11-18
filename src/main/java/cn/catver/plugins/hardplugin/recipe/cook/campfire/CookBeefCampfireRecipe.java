@@ -10,6 +10,6 @@ public class CookBeefCampfireRecipe {
     public static CampfireRecipe gen(){
         return CookRawMeatCampfireRecipe.gen(ID,
                 new ItemStack(Material.COOKED_BEEF),new RecipeChoice.ExactChoice(new ItemStack(Material.BEEF)),
-                100);
+                1000);
     }
 }

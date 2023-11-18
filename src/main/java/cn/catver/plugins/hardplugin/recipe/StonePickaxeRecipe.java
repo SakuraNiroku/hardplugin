@@ -21,6 +21,7 @@ public class StonePickaxeRecipe {
         recipe.setIngredient('j',new RecipeChoice.ExactChoice(new ItemStack(Material.FLINT)));
         recipe.setIngredient('k',new RecipeChoice.ExactChoice(new ItemStack(Material.COAL_BLOCK)));
         recipe.setIngredient('o',new RecipeChoice.ExactChoice(CoalCraftTableCore.getItem()));
+        recipe.setIngredient('l',new RecipeChoice.ExactChoice(new ItemStack(Material.STICK)));
         return recipe;
     }
 }
