@@ -1,7 +1,8 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.rule.clickCoalCraftTableToGiveACore.clickCoalCraftTableToGiveACore;
+import cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore.clickCoalCraftTableToGiveACore;
 import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
+import cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore.clickRawCopperCraftTableToGiveACore;
 import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerHeldItemEvent;
 import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerJoinEvent;
 import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerLeftEvent;
@@ -24,6 +25,7 @@ public class EventRegister {
         events.put("eatRawMeatMaybeDie",new eatRawMeatMaybeDie());
 
         events.put("clickCoalCraftTableToGiveACore",new clickCoalCraftTableToGiveACore());
+        events.put("clickRawCopperCraftTableToGiveACore",new clickRawCopperCraftTableToGiveACore());
 
         events.put("displayToolDurableFromBossBar1",new DurableDisplayPlayerJoinEvent());
         events.put("displayToolDurableFromBossBar2",new DurableDisplayPlayerLeftEvent());

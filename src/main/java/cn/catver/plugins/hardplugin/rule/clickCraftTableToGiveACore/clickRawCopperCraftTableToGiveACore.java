@@ -1,6 +1,6 @@
-package cn.catver.plugins.hardplugin.rule.clickCoalCraftTableToGiveACore;
+package cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore;
 
-import cn.catver.plugins.hardplugin.item.CoalCraftTableCore;
+import cn.catver.plugins.hardplugin.item.RawCopperCraftTableCore;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class clickCoalCraftTableToGiveACore implements Listener {
+public class clickRawCopperCraftTableToGiveACore implements Listener {
     @EventHandler
     public void playerhitblockfunc(PlayerInteractEvent event){
         if(event.hasBlock()){
@@ -25,13 +25,13 @@ public class clickCoalCraftTableToGiveACore implements Listener {
                         };
 
                         for (Location loc : locations) {
-                            if(loc.getBlock().getType() != Material.COAL_BLOCK){
+                            if(loc.getBlock().getType() != Material.RAW_COPPER_BLOCK){
                                 return;
                             }
                         }
                     }
-                    event.getPlayer().getInventory().addItem(CoalCraftTableCore.getItem());
-                    event.getPlayer().sendMessage(ChatColor.GREEN+"你获得了一个煤炭工作台核心！");
+                    event.getPlayer().getInventory().addItem(RawCopperCraftTableCore.getItem());
+                    event.getPlayer().sendMessage(ChatColor.GREEN+"你获得了一个粗铜工作台核心！");
                 }
             }
         }

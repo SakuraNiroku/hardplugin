@@ -13,16 +13,16 @@ public class RawCopperPickaxeItem {
     static {
         itemStack = new ItemStack(Material.IRON_PICKAXE);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("铜镐");
+        itemMeta.setDisplayName("粗铜镐");
         List<String> lore = new ArrayList<>();
-        lore.add("耐久：10");
+        lore.add("耐久：20");
         itemMeta.setLore(lore);
         itemMeta.setUnbreakable(true);
         itemStack.setItemMeta(itemMeta);
 
         NBT.modify(itemStack, nbt->{
             nbt.setString("isItTool","yes");
-            nbt.setInteger("durable_hardplugin",10);
+            nbt.setInteger("durable_hardplugin",20);
         });
     }
 

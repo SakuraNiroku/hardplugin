@@ -2,6 +2,7 @@ package cn.catver.plugins.hardplugin.recipe;
 
 import cn.catver.plugins.hardplugin.Hardplugin;
 import cn.catver.plugins.hardplugin.item.CoalCraftTableCore;
+import cn.catver.plugins.hardplugin.item.RawCopperCraftTableCore;
 import cn.catver.plugins.hardplugin.item.RawCopperPickaxeItem;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -18,7 +19,7 @@ public class RawCopperPickaxeRecipe {
         recipe.shape("kkk","klk","alp");
         recipe.setIngredient('k',new RecipeChoice.ExactChoice(new ItemStack(Material.RAW_COPPER)));
         recipe.setIngredient('l',new RecipeChoice.ExactChoice(new ItemStack(Material.STICK)));
-        recipe.setIngredient('a',new RecipeChoice.ExactChoice(CoalCraftTableCore.getItem()));
+        recipe.setIngredient('a',new RecipeChoice.ExactChoice(RawCopperCraftTableCore.getItem()));
         recipe.setIngredient('p',new RecipeChoice.ExactChoice(new ItemStack(Material.LAPIS_LAZULI)));
     }
 }

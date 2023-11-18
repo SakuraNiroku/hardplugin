@@ -16,17 +16,17 @@ public class CopperAxeItem {
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName("铜斧头");
         List<String> lore = new ArrayList<>();
-        lore.add("耐久：75");
+        lore.add("耐久：275");
         itemMeta.setLore(lore);
         itemMeta.setUnbreakable(true);
         itemStack.setItemMeta(itemMeta);
 
         itemStack.addEnchantment(Enchantment.DAMAGE_ALL,2);
-        itemStack.addEnchantment(Enchantment.DIG_SPEED,1);
+        itemStack.addEnchantment(Enchantment.DIG_SPEED,2);
 
         NBT.modify(itemStack, nbt->{
             nbt.setString("isItTool","yes");
-            nbt.setInteger("durable_hardplugin",75);
+            nbt.setInteger("durable_hardplugin",275);
         });
     }
 
