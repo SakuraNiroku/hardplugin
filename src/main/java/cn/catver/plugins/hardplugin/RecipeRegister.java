@@ -43,6 +43,7 @@ public class RecipeRegister {
         recipes.put(FurnaceRecipe.ID,FurnaceRecipe.recipe);
         recipes.put(CopperIngotRecipe.ID,CopperIngotRecipe.recipe);
         recipes.put(CopperAxeRecipe.ID,CopperAxeRecipe.recipe);
+        recipes.put(ChestRecipe.ID,ChestRecipe.gen());
 
 
         logger.info("开始导入配方");
