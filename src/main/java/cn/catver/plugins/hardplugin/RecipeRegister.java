@@ -119,7 +119,7 @@ public class RecipeRegister {
                             if(recipe.get("output").getAsJsonObject().get("material") == null){
                                 //id存在
                                 itemStack = ItemRegister.getItem(
-                                        recipe.get("input").getAsJsonObject().get("id").getAsString()
+                                        recipe.get("output").getAsJsonObject().get("id").getAsString()
                                 );
                             }else{
                                 //material存在
