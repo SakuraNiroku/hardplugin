@@ -88,7 +88,7 @@ public class ItemRegister {
                     }
                 }
                 itemsmap.put(item.get("id").getAsString(),itemStack);
-                Hardplugin.getIns().logger.info(String.format("加载%s物品完成！", item.get("id").getAsString()));
+                //Hardplugin.getIns().logger.info(String.format("加载%s物品完成！", item.get("id").getAsString()));
             }
             Hardplugin.getIns().logger.info("物品加载完成！");
         }catch (Exception e){

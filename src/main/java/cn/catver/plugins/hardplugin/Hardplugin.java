@@ -13,7 +13,6 @@ public final class Hardplugin extends JavaPlugin {
     public void onEnable() {
         Ins = this;
         // Plugin startup logic
-
         //TODO NoVanillaCraft
         Bukkit.clearRecipes();
 
