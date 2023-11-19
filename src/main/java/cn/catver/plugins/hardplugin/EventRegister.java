@@ -1,15 +1,13 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore.clickCoalCraftTableToGiveACore;
-import cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock.cannotNoToolsBreakBlock;
-import cn.catver.plugins.hardplugin.rule.clickCraftTableToGiveACore.clickRawCopperCraftTableToGiveACore;
-import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerHeldItemEvent;
-import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerJoinEvent;
-import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayPlayerLeftEvent;
-import cn.catver.plugins.hardplugin.rule.eatRawMeatMaybeDie.eatRawMeatMaybeDie;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -19,17 +17,30 @@ public class EventRegister {
     public EventRegister(Hardplugin hardplugin){
         Logger logger = hardplugin.getLogger();
 
-        //TODO 写在这里
-        events.put("cannotNoToolsBreakBlock",new cannotNoToolsBreakBlock());
-
-        events.put("eatRawMeatMaybeDie",new eatRawMeatMaybeDie());
-
-        events.put("clickCoalCraftTableToGiveACore",new clickCoalCraftTableToGiveACore());
-        events.put("clickRawCopperCraftTableToGiveACore",new clickRawCopperCraftTableToGiveACore());
-
-        events.put("displayToolDurableFromBossBar1",new DurableDisplayPlayerJoinEvent());
-        events.put("displayToolDurableFromBossBar2",new DurableDisplayPlayerLeftEvent());
-        events.put("displayToolDurableFromBossBar3",new DurableDisplayPlayerHeldItemEvent());
+        { //读取并解析 events.json
+            try{
+                String eventsjsonstr;
+                { //读
+                    BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("data/events.json")));
+                    StringBuilder sb = new StringBuilder();
+                    String t;
+                    while ((t = br.readLine()) != null) sb.append(t);
+                    eventsjsonstr = sb.toString();
+                }
+                { //解析
+                    JsonArray root = JsonParser.parseString(eventsjsonstr).getAsJsonArray();
+                    for (JsonElement element : root) {
+                        String value = element.getAsString();
+                        logger.info(String.format("加载%s事件中", value));
+                        events.put(value, (Listener) Class.forName(value).newInstance());
+                    }
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+                logger.severe("事件加载失败！服务器停止！");
+                Bukkit.shutdown();
+            }
+        }
 
         logger.info("正在导入事件！");
         for (Map.Entry<String, Listener> entry : events.entrySet()) {

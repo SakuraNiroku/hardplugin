@@ -1,6 +1,6 @@
-package cn.catver.plugins.hardplugin.rule.cannotNoToolsBreakBlock;
+package cn.catver.plugins.hardplugin.event;
 
-import cn.catver.plugins.hardplugin.rule.displayToolDurableFromBassBar.DurableDisplayManager;
+import cn.catver.plugins.hardplugin.tool.DisplayDurableFromBossBar;
 import de.tr7zw.changeme.nbtapi.NBT;
 import de.tr7zw.changeme.nbtapi.iface.ReadableItemNBT;
 import org.bukkit.ChatColor;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
-public class cannotNoToolsBreakBlock implements Listener {
+public class HardBlockBreakEvent implements Listener {
     @EventHandler
     public void playerbreakblockfunc(BlockBreakEvent e){
         if(e.getPlayer().getInventory().getItemInMainHand().getType() != Material.AIR){
@@ -45,11 +45,11 @@ public class cannotNoToolsBreakBlock implements Listener {
                         //e.getPlayer().getInventory().addItem(itemStack);
                         e.getPlayer().getInventory().setItem(slot,itemStack);
                         //e.getPlayer().sendMessage(ChatColor.GREEN+ String.format("你的工具剩余%d点耐久", durable));
-                        DurableDisplayManager.updateBossBar(e.getPlayer(),itemStack);
+                        DisplayDurableFromBossBar.DurableDisplayManager.updateBossBar(e.getPlayer(),itemStack);
                     }else{
                         e.getPlayer().getInventory().setItem(slot,new ItemStack(Material.AIR));
                         e.getPlayer().sendMessage(ChatColor.RED+"你的工具炸了！");
-                        DurableDisplayManager.updateBossBar(e.getPlayer(), null);
+                        DisplayDurableFromBossBar.DurableDisplayManager.updateBossBar(e.getPlayer(), null);
                     }
                 }
             }else {

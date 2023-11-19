@@ -1,6 +1,6 @@
 package cn.catver.plugins.hardplugin;
 
-import cn.catver.plugins.hardplugin.rule.NoVanillaCraft.NoVanillaCraft;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -15,7 +15,7 @@ public final class Hardplugin extends JavaPlugin {
         // Plugin startup logic
 
         //TODO NoVanillaCraft
-        NoVanillaCraft.init();
+        Bukkit.clearRecipes();
 
         logger.info("尝试导入物品");
         ItemRegister.init();
@@ -35,7 +35,7 @@ public final class Hardplugin extends JavaPlugin {
         //TODO 卸载配方
         recipeRegister.unload(this);
         //TODO 关闭NoVanillaCraft
-        NoVanillaCraft.unload();
+        Bukkit.resetRecipes();
 
     }
 
