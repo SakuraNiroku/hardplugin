@@ -63,26 +63,17 @@ public class ItemRegister {
                         }
                     }
                 }
+                { //nbt
+
+                }
                 { //判断是否为工具
                     if(item.get("tool").getAsBoolean()){
-                        { //设置工具不使用原版耐久系统
-                            ItemMeta itemMeta = itemStack.getItemMeta();
-                            itemMeta.setUnbreakable(true);
-                            itemStack.setItemMeta(itemMeta);
-                        }
-                        { //设置工具lore显示
-                            int durable = item.get("durable").getAsInt();
-                            List<String> lore = new ArrayList<>();
-                            lore.add(String.format("耐久：%d", durable));
-                            ItemMeta itemMeta = itemStack.getItemMeta();
-                            itemMeta.setLore(lore);
-                            itemStack.setItemMeta(itemMeta);
-                        }
                         { //nbt设置
                             int durable = item.get("durable").getAsInt();
                             NBT.modify(itemStack,nbt->{
-                                nbt.setString("isItTool","yes");
-                                nbt.setInteger("durable_hardplugin",durable);
+                                //nbt.setString("isItTool","yes");
+                                nbt.setBoolean("isItTool",true);
+                                nbt.setInteger("Damage",itemStack.getType().getMaxDurability()-(itemStack.getType().getMaxDurability()-durable));
                             });
                         }
                     }

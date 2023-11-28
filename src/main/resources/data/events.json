@@ -2,5 +2,6 @@
   "cn.catver.plugins.hardplugin.event.HardBlockBreakEvent",
   "cn.catver.plugins.hardplugin.event.HardPlayerInteractEvent",
   "cn.catver.plugins.hardplugin.event.HardPlayerItemConsumeEvent",
-  "cn.catver.plugins.hardplugin.tool.DisplayDurableFromBossBar"
+  "cn.catver.plugins.hardplugin.event.HardPlayerItemHeldEvent",
+  "cn.catver.plugins.hardplugin.event.HardPlayerMoveEvent"
 ]

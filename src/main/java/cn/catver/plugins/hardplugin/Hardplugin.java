@@ -1,6 +1,7 @@
 package cn.catver.plugins.hardplugin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.loot.LootTables;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
