@@ -1,5 +1,6 @@
 package cn.catver.plugins.hardplugin;
 
+import cn.catver.plugins.hardplugin.manyblock.StrongTable;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -189,7 +190,19 @@ public class RecipeRegister {
                         for (Map.Entry<Character, RecipeChoice> entry : rcmap.entrySet()) {
                             shapedRecipe.setIngredient(entry.getKey(),entry.getValue());
                         }
-                        r = shapedRecipe;
+
+                        //判断有序配方类型
+                        if(recipe.get("shapedType") == null){
+                            //工作台配方
+                            r = shapedRecipe;
+                        }else{
+                            String rtype = recipe.get("shapedType").getAsString();
+                            if(rtype.equalsIgnoreCase("strongTable")){
+                                //StrongTable配方
+                                StrongTable.addToHashMap(recipe.get("id").getAsString(),shapedRecipe);
+                            }
+                        }
+
 
 
                     } else if (type.equalsIgnoreCase("shapeless")) {
@@ -234,6 +247,7 @@ public class RecipeRegister {
                         for (RecipeChoice choice : rclist) {
                             shapelessRecipe.addIngredient(choice);
                         }
+
                         r = shapelessRecipe;
 
 

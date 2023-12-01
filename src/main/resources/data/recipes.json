@@ -436,5 +436,25 @@
       "material": "TORCH",
       "count": 16
     }
+  },
+  {
+    "type": "shaped",
+    "id": "torch_strong_recipe",
+    "shaped": [
+      " a "," a "," b "
+    ],
+    "input": {
+      "a": {
+        "material": "FLINT"
+      },
+      "b": {
+        "material": "STICK"
+      }
+    },
+    "output": {
+      "material": "TORCH",
+      "count": 16
+    },
+    "shapedType": "strongTable"
   }
 ]
