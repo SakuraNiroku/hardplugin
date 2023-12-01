@@ -7,5 +7,4 @@
 * 测试服务器？
   * 没有，要不你送我？bushi
 ## 有好想法？
-* 来[这里](https://github.com/LiangGuopei/hardplugin/blob/master/src/main/resources/rule.txt)和[issue](https://github.com/LiangGuopei/hardplugin/issues)来查看是否已经有了
 * 提交issue就行qwq，记得主题前面加上“[想法]”
